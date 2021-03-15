@@ -17,7 +17,7 @@ export default function Home() {
                 }
             `}</style>
             <Head>
-                <title>Create Next App</title>
+                <title>SouceRecords</title>
                 <link rel="icon" href="/favicon.ico" />
                 <link
                     rel="preload"
