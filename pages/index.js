@@ -141,7 +141,7 @@ export default function Home() {
                     </section>
                     <section className="BulletContainer">
                         <Bullet text='Dragibus'></Bullet>
-                        <Bullet text='Fenix Label'></Bullet>
+                        <Bullet text='Pegasus'></Bullet>
                     </section>
                 </>
             ) : (
