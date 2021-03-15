@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import ArtisteCard from '../components/ArtisteCard'
 import CardImgRight from '../components/CardImgRight'
 import FadeInSection from '../components/FadeInSection'
-import NavBar from '../components/Navbar'
-import Video from '../components/Video'
-import styles from '../styles/Home.module.css'
+
 
 export default function Home() {
     return (
