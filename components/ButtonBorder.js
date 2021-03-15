@@ -12,9 +12,10 @@ const ButtonBorder = (props) => {
                     font-size: 17px;
                     color: white;
                     margin: 6px 0px 30px 0px;
+                    cursor: pointer;
                 }
             `}</style>
-            <button>{props.textContent}</button>
+            <button onClick = {props.onClick}>{props.textContent}</button>
         </>
     )
 }

@@ -7,7 +7,6 @@ const artistes = () => {
                 section {
                     max-width: var(--maxWidth);
                     margin: 0 auto;
-                    padding: var(--mainPadding);
                 }
                 h2 {
                     font-size: var(--bigBigFontSize);

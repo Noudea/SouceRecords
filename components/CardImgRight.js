@@ -45,7 +45,7 @@ const CardImgRight = (props) => {
                     padding: var(--tile-padding);
                 }
                 .textContent {
-                    font-size: var(--smallFontSize)
+                    font-size: var(--smallFontSize);
                     line-height: 1.4211;
                     font-weight: 600;
                     letter-spacing: 0.012em;

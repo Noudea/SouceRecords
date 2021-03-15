@@ -114,5 +114,6 @@ img {
         --bigFontSize : 96px;
         --bigBigFontSize : 116px;
         --bigMargin : 100px;
+         --mainPadding : 0 32px;
     }
 }
