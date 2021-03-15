@@ -6,6 +6,7 @@ import EnVedette from '../components/EnVedette'
 import MusiqueContainer from '../components/MusiqueContainer'
 import ImgGallery from '../components/ImgGallery'
 import ListOverEffect from '../components/ListOverEffect'
+import Bullet from '../components/Bullet'
 
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false)
@@ -17,6 +18,16 @@ export default function Home() {
     return (
         <>
             <style jsx>{`
+
+                .BulletContainer {
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .QLF {
+                    margin-bottom : 50px;
+                }
                 section {
                     max-width: var(--maxWidth);
                     margin: 0 auto;
@@ -98,8 +109,20 @@ export default function Home() {
                             buttonTextContent="Découvrir cet artiste"
                             imgSrc="/images/samretouche3.png"
                         ></CardImgRight>
+                        <CardImgRight
+                            colorTop="#fe728e"
+                            colorMiddle="#000000"
+                            colorBottom="#000000"
+                            header2="SHEDNA"
+                            h2="Lorem ipsum dolor sit"
+                            textContent=" Integer sit amet
+                    lobortis nisi. Proin molestie dictum leo, elementum posuere
+                    magna posuere sit amet."
+                            buttonTextContent="Découvrir cet artiste"
+                            imgSrc="/images/shednaRetouche4.png"
+                        ></CardImgRight>
                     </section>
-                    <section>
+                    <section className='QLF'>
                         <h2>QLF</h2>
                         <ListOverEffect></ListOverEffect>
                         {/* <ImgGallery></ImgGallery> */}
@@ -115,6 +138,10 @@ export default function Home() {
                             width="100%"
                             allowFullScreen
                         ></iframe>
+                    </section>
+                    <section className="BulletContainer">
+                        <Bullet text='Dragibus'></Bullet>
+                        <Bullet text='Fenix Label'></Bullet>
                     </section>
                 </>
             ) : (

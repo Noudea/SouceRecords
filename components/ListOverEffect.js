@@ -52,11 +52,16 @@ const ListOverEffect = () => {
     return (
         <>
             <style jsx>{`
+
+                .line {
+                      text-decoration: line-through;
+                }
                 .container {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    margin-bottom:50px;
                 }
                 .wrapper {
                     width: 100%;
@@ -74,15 +79,35 @@ const ListOverEffect = () => {
                     position:absolute;
                     top : ${position.y}px;
                     left : ${position.x}px;
-                    max-width:400px;
-                    transform: translate(50px,-50%);
+                    max-width:300px;
+                    transform: translate(-50%,-150%);
                 }
-                @media screen and (min-width: 1024px) {
+                @media screen and (min-width: 768px) {
+                    .container {
+                       margin-bottom:96px;
+                    }
+                    img {
+                        position:absolute;
+                        top : ${position.y}px;
+                        left : ${position.x}px;
+                        max-width:500px;
+                        transform: translate(-50%,-120%);
+                    }
+                }
+                @media screen and (min-width: 1440px) {
+                    img {
+                        position:absolute;
+                        top : ${position.y}px;
+                        left : ${position.x}px;
+                        max-width:700px;
+                        transform: translate(50px,-50%);
+                    }
                     .container {
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
                         align-items: center;
+                        margin-bottom:120px;
                     }
                     .container1 {
                         width: 50%;
@@ -100,11 +125,22 @@ const ListOverEffect = () => {
                     </p>
                     <p data-imgsrc='/images/samGun.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Sam Hopkins</p>
                     <p data-imgsrc='/images/santana.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Santana Martinez Diaz</p>
+                    <p data-imgsrc='/images/106.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Laure Pierce</p>
+                    <p data-imgsrc='/images/evagomez.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Eva Gomez</p>
+                    <p data-imgsrc='#' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Daddy</p>
+                    <p className='line' data-imgsrc='/images/cacahuete.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Cacahuete</p>
+                    <p className='line' data-imgsrc='/images/Kofee.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Kofee</p>
+
                 </div>
                 <div className="container2 wrapper">
                     <p data-imgsrc='/images/lindelof.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Leif Lindelof</p>
                     <p data-imgsrc='/images/santaCruz2.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Santacruz</p>
                     <p data-imgsrc='/images/shadna3.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Shadna</p>
+                    <p data-imgsrc='/images/#.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >King</p>
+                    <p data-imgsrc='/images/#.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Guirmala</p>
+                    <p data-imgsrc='/images/caitlyn.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Caitlyn</p>
+                    <p data-imgsrc='/images/mia.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Mia</p>
+                    <p className='line' data-imgsrc='/images/milano.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Milano</p>
                 </div>
             </div>
         </>
