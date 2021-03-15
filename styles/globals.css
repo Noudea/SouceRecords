@@ -1,16 +1,118 @@
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SF-Pro-Display-Regular.otf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SF-Pro-Display-Medium.otf");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("/fonts/SF-Pro-Display-Semibold.otf");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: url("/fonts/SF-Pro-Text-Regular.otf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: url("/fonts/SF-Pro-Text-Medium.otf");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: url("/fonts/SF-Pro-Text-Semibold.otf");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: "SF Pro Display",
+        "SF Pro Icons",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif;
+    background-color: black;
+    /* color: #1d1d1f; */
+    font-style: normal;
+    font-size: 106.25%;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p,h2,h1 {
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --tile-padding: 30px;
+    --colorHawai : #005c56;
+    --mainPadding : 0 16px;
+    --maxWidth : 92%;
+    --smallSmallFontSize : 12px;
+    --smallFontSize : 18px;
+    --mediumFontSize : 24px;
+    --bigFontSize : 42px;
+    --bigBigFontSize : 64px;
+    --bigMargin : 60px;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --maxWidth : 92%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --maxWidth: 60%;
+        --smallFontSize : 21px;
+        --mediumFontSize : 32px;
+        --bigFontSize : 96px;
+        --bigBigFontSize : 116px;
+        --bigMargin : 100px;
+    }
 }

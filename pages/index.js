@@ -1,65 +1,84 @@
 import Head from 'next/head'
+import ArtisteCard from '../components/ArtisteCard'
+import CardImgRight from '../components/CardImgRight'
+import FadeInSection from '../components/FadeInSection'
+import NavBar from '../components/Navbar'
+import Video from '../components/Video'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    return (
+        <>
+            <style jsx>{`
+                section {
+                    max-width: var(--maxWidth);
+                    margin: 0 auto;
+                    padding: var(--mainPadding);
+                }
+                h2 {
+                    font-size: var(--bigBigFontSize)
+                }
+            `}</style>
+            <Head>
+                <title>Create Next App</title>
+                <link rel="icon" href="/favicon.ico" />
+                <link
+                    rel="preload"
+                    href="/fonts/SF-Pro-Display-Regular.otf"
+                    as="font"
+                    crossOrigin=""
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/SF-Pro-Display-Medium.otf"
+                    as="font"
+                    crossOrigin=""
+                />
+                <link
+                    rel="preload"
+                    href="/fonts/SF-Pro-Display-Semibold.otf"
+                    as="font"
+                    crossOrigin=""
+                />
+            </Head>
+            {/* <Video src= '/videos/yt1s.com -   KYLE FEAT SAM  TRIO CLIP OFFICIEL_v720P.mp4'></Video> */}
+            <section>
+                <FadeInSection></FadeInSection>
+            </section>
+            <section>
+                <h2>Nos Artistes</h2>
+                <CardImgRight
+                    colorTop="#005c56"
+                    colorMiddle="#000000"
+                    colorBottom="#000000"
+                    header2="KYLE"
+                    h2="Lorem ipsum dolor sit"
+                    textContent=" Integer sit amet
+                    lobortis nisi. Proin molestie dictum leo, elementum posuere
+                    magna posuere sit amet."
+                    buttonTextContent="Découvrir cet artiste"
+                    imgSrc="/images/kyleretouche3.png"
+                ></CardImgRight>
+                <CardImgRight
+                    colorTop="#fd151f"
+                    colorMiddle="#000000"
+                    colorBottom="#000000"
+                    header2="SAM"
+                    h2="Lorem ipsum dolor sit"
+                    textContent=" Integer sit amet
+                    lobortis nisi. Proin molestie dictum leo, elementum posuere
+                    magna posuere sit amet."
+                    buttonTextContent="Découvrir cet artiste"
+                    imgSrc="/images/samretouche3.png"
+                ></CardImgRight>
+                {/* <ArtisteCard textContent="                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean quis erat gravida, scelerisque elit dignissim,
+                    finibus massa. Ut vel enim lorem. Maecenas ipsum dui, porta
+                    sit amet lorem sit amet, finibus semper arcu. Nam nec nibh
+                    iaculis, eleifend nibh vel, tincidunt est. Integer sit amet
+                    lobortis nisi. Proin molestie dictum leo, elementum posuere
+                    magna posuere sit amet." imgSrc='/images/samretouche3.png'></ArtisteCard> */}
+            </section>
+        </>
+    )
 }
