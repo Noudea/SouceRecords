@@ -38,6 +38,18 @@ const artistes = () => {
                     buttonTextContent="Découvrir cet artiste"
                     imgSrc="/images/samretouche3.png"
                 ></CardImgRight>
+                <CardImgRight
+                    colorTop="#fe728e"
+                    colorMiddle="#000000"
+                    colorBottom="#000000"
+                    header2="SHEDNA"
+                    h2="Lorem ipsum dolor sit"
+                    textContent=" Integer sit amet
+                    lobortis nisi. Proin molestie dictum leo, elementum posuere
+                    magna posuere sit amet."
+                    buttonTextContent="Découvrir cet artiste"
+                    imgSrc="/images/shednaRetouche4.png"
+                ></CardImgRight>
                 {/* <ArtisteCard textContent="                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean quis erat gravida, scelerisque elit dignissim,
                     finibus massa. Ut vel enim lorem. Maecenas ipsum dui, porta
