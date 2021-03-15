@@ -4,6 +4,8 @@ import FadeInSection from '../components/FadeInSection'
 import { useState, useEffect } from 'react'
 import EnVedette from '../components/EnVedette'
 import MusiqueContainer from '../components/MusiqueContainer'
+import ImgGallery from '../components/ImgGallery'
+import ListOverEffect from '../components/ListOverEffect'
 
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false)
@@ -21,6 +23,10 @@ export default function Home() {
                 }
                 h2 {
                     font-size: var(--bigBigFontSize);
+                }
+                .gallery {
+                    width: 100%;
+                    height: 800px;
                 }
             `}</style>
             <Head>
@@ -92,6 +98,23 @@ export default function Home() {
                             buttonTextContent="Découvrir cet artiste"
                             imgSrc="/images/samretouche3.png"
                         ></CardImgRight>
+                    </section>
+                    <section>
+                        <h2>QLF</h2>
+                        <ListOverEffect></ListOverEffect>
+                        {/* <ImgGallery></ImgGallery> */}
+                        <iframe
+                            className="gallery"
+                            src="/gallery/index.html"
+                            name="myiFrame"
+                            scrolling="yes"
+                            frameBorder="0"
+                            marginHeight="0px"
+                            marginWidth="0px"
+                            height="100%"
+                            width="100%"
+                            allowFullScreen
+                        ></iframe>
                     </section>
                 </>
             ) : (

@@ -94,6 +94,7 @@ img {
     --smallSmallFontSize : 12px;
     --smallFontSize : 18px;
     --mediumFontSize : 24px;
+    --mediumMediumFontSize : 24px;
     --bigFontSize : 42px;
     --bigBigFontSize : 64px;
     --bigMargin : 60px;
@@ -111,6 +112,7 @@ img {
         --maxWidth: 60%;
         --smallFontSize : 21px;
         --mediumFontSize : 32px;
+        --mediumMediumFontSize : 64px;
         --bigFontSize : 96px;
         --bigBigFontSize : 116px;
         --bigMargin : 100px;
