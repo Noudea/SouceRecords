@@ -113,6 +113,10 @@ img {
 
 
 @media screen and (min-width: 1024px) {
+    .windowWrapper {
+        width:795px;
+        height:812px;
+    }
     :root {
         --maxWidth: 60%;
         --smallFontSize : 21px;
@@ -149,6 +153,8 @@ img {
     -o-user-drag: none;
     user-drag: none;
 }
+
+
 
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

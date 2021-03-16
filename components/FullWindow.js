@@ -92,7 +92,7 @@ const FullWindow = (props) => {
         console.log('onMinimizeClick')
         if(isMinimize) {
             setIsMinimize(false)
-            setHeight('875px')
+            setHeight(props.height)
         } else {
                         setIsMinimize(true)
                        setHeight('100px')

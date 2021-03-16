@@ -5,7 +5,7 @@ const Window = (props) => {
             .windowWrapper {
                 height : ${props.height};
                 width : ${props.width};
-                padding : 30px 15px;
+                padding : 30px 15px 60px 15px;
                 background-color : ${props.background};
                 border-radius:10px;
                 overflow: scroll;

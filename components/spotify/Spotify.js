@@ -209,8 +209,9 @@ const Spotify = () => {
             <style jsx>{`
                 .spotifyAudioContainer {
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 0px;
                     width: 90%;
+                    background-color:black;
                 }
                 .progressBarContainer {
                     background-color: rgba(255, 255, 255, 0.2);

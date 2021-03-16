@@ -1,4 +1,6 @@
 const FadeInSection = () => {
+
+    //width img 80% 60% 40%
     return (
         <>
             <style jsx>{`
@@ -63,12 +65,12 @@ const FadeInSection = () => {
                     margin-bottom: 16px;
                 }
                 img {
-                    width: 80%;
+                    width: 276px;
                     animation: fade-in-hero 1.5s ease-out 0.3s 1 forwards;
                 }
                 @media screen and (min-width: 768px) {
                     img {
-                        width: 60%;
+                        width: 400px;
                     }
                 }
 

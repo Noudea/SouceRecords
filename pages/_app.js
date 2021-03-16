@@ -17,6 +17,22 @@ function MyApp({ Component, pageProps }) {
     const [themes, setThemes] = useState(false)
     const [profile, setProfile] = useState(false)
     const [spotify, setSpotify] = useState(false)
+    const [width,setWidth] = useState(false)
+    const [height,setHeight] = useState(false)
+    const [screenWidth,setScreenWidth] = useState(false);
+
+    useEffect(() => {
+        console.log(window.screen.width)
+        console.log(window.screen.height)
+        if(window.screen.width < 400) {
+            setWidth(window.screen.width+'px')
+            setHeight('500px')
+        } else {
+            setWidth('375px')
+            setHeight('812px')
+        }
+    })
+
 
     const value = {
         welcome,
@@ -48,8 +64,8 @@ function MyApp({ Component, pageProps }) {
                         <>
                             {/* <div className='windows'></div> */}
                             <FullWindow
-                                width="375px"
-                                height="812px"
+                                width={width}
+                                height={height}
                                 pageName="Spotify"
                                 background="#010101"
                             >

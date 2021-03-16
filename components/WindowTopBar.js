@@ -61,10 +61,12 @@ const WindowTopBar = (props) => {
                 <div className="buttonContainer">
                     <div
                         onClick={props.onCloseClick}
+                        onTouchStart={props.onCloseClick}
                         className="button red"
                     ></div>
                     <div
                         onClick={props.onMinimizeClick}
+                        onTouchStart={props.onMinimizeClick}
                         className="button orange"
                     ></div>
                 </div>

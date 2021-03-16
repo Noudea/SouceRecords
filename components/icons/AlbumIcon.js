@@ -34,7 +34,7 @@ const AlbumIcon = (props) => {
                 onMouseEnter = {onMouseEnter} onMouseLeave = {onMouseLeave}
             ></Image> */}
             <div className='iconWrapper'>
-                <img onClick={props.onClick} onDragStart={dragStart} src={props.src}></img>
+                <img onTouchStart={props.onClick} onClick={props.onClick} onDragStart={dragStart} src={props.src}></img>
                 <p>{props.name}</p>
             </div>
         </div>
