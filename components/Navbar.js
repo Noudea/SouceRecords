@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import NavAudioPlayer from './NavAudioPlayer'
 import {useEffect,useState,useContext} from 'react'
-import FullWindow from './FullWindow'
 import PageRenderContext from '../contexts/PageRenderContext'
 
 
@@ -27,10 +26,9 @@ const NavBar = () => {
         <>
             <style jsx>{`
 
-                .test {
+                .spotify {
                     width:50px;
                     height:50px;
-                    background-color:red;
                 }
                 .windows {
                     height:875px;
@@ -114,7 +112,7 @@ const NavBar = () => {
                             <a>SouceRecords</a>
                         </Link>
                     </div>
-                    <div className='test' onClick={openSpotify}></div>
+                        <img className='spotify' onClick={openSpotify} src='svg/Spotify-Icon-Logo.wine.svg'></img>
                     <div>
                         <NavAudioPlayer></NavAudioPlayer>
                         {/* <LinkButton></LinkButton> */}
