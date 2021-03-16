@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
         console.log(window.screen.height)
         if(window.screen.width < 400) {
             setWidth(window.screen.width+'px')
-            setHeight('500px')
+            setHeight('400px')
         } else {
             setWidth('375px')
             setHeight('812px')
