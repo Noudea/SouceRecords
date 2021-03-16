@@ -5,7 +5,6 @@ import WindowTopBar from './WindowTopBar'
 import Window from './Window'
 
 const FullWindow = (props) => {
-    console.log(props)
     const [isVisible, setIsVisible] = useState(true)
     const [width, setWidth] = useState(props.width)
     const [height, setHeight] = useState(props.height)
@@ -28,7 +27,6 @@ const FullWindow = (props) => {
     const { spotify, setSpotify } = useContext(PageRenderContext)
 
     const onMaximizeClick = () => {
-        console.log('maximize')
     }
 
     useEffect(() => {
@@ -80,7 +78,7 @@ const FullWindow = (props) => {
         if (props.pageName == 'Profil') {
             setProfile(false);
         }
-        if (props.pageName == 'Spotify') {
+        if (props.pageName == 'Soucesify') {
             setSpotify(false);
         }
         if (props.pageName == 'Hielo') {
@@ -89,7 +87,6 @@ const FullWindow = (props) => {
     }
 
     const onMinimizeClick = () => {
-        console.log('onMinimizeClick')
         if(isMinimize) {
             setIsMinimize(false)
             setHeight(props.height)

@@ -6,8 +6,6 @@ const EnVedette = () => {
 
     useEffect(() => {
         const video = document.getElementById('video')
-        // video.muted=false;
-        console.log(video)
         if(open) {
             video.addEventListener('ended', () => {
                 setIsOpen(false)
@@ -15,12 +13,7 @@ const EnVedette = () => {
         }
     })
 
-    const onMouseEnter = () => {
-        console.log('mouseEnter')
-    }
-
     const onClick = () => {
-        console.log('click')
         setIsOpen(true)
     }
     return (
@@ -62,7 +55,7 @@ const EnVedette = () => {
                 }
             `}</style>
             <div className="container">
-                <div onMouseEnter={onMouseEnter} className="imgContainer">
+                <div className="imgContainer">
                     <img src="/images/coverTrio.png"></img>
                 </div>
                 {open ? <>

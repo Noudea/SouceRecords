@@ -1,23 +1,18 @@
-import {useState,useEffect, useContext} from 'react'
+import { useState, useEffect, useContext } from 'react'
 import PlayerContext from '../../../contexts/PlayerContext'
 
-
 const SpotifyAudioPlayer = () => {
-
     const [reactAudio, setReactAudio] = useState(false)
-    const [rangeBarWidth,setRangeBarWidth] = useState(0)
-    const {song,setSong} = useContext(PlayerContext)
-    const {songSrc,setSongSrc} = useContext(PlayerContext)
-    const {songKey,setSongKey} = useContext(PlayerContext)
-        const soundReady = () => {
-        console.log(reactAudio.audioEl)
-        if(reactAudio) {
-            console.log(reactAudio.audioEl.current.duration)
-            console.log(reactAudio.audioEl.current.currentTime)
+    const [rangeBarWidth, setRangeBarWidth] = useState(0)
+    const { song, setSong } = useContext(PlayerContext)
+    const { songSrc, setSongSrc } = useContext(PlayerContext)
+    const { songKey, setSongKey } = useContext(PlayerContext)
+    const soundReady = () => {
+        if (reactAudio) {
         }
     }
 
-        const myMusic = {
+    const myMusic = {
         playListRap: [
             {
                 title: 'Billet Vert',
@@ -59,12 +54,9 @@ const SpotifyAudioPlayer = () => {
         ],
     }
 
-
-
     const onEnd = () => {
         const currentPlaylist = playlist
         if (songKey == myMusic[currentPlaylist].length - 1) {
-            console.log('start to 0')
             setSongKey(0)
             setSongSrc(myMusic[currentPlaylist][0].src)
             setSong(myMusic[currentPlaylist][0].title)
@@ -75,27 +67,25 @@ const SpotifyAudioPlayer = () => {
         }
     }
 
-    
-    return (<>
-    
-                            <ReactAudioPlayer
-                            src={songSrc}
-                            controls
-                            ref={(element) => {
-                                setReactAudio(element)
-                            }}
-                            onCanPlayThrough = {soundReady}
-                            autoPlay
-                            onEnded={onEnd}
-                            style={{
-                                width: '100%',
-                                backgroundColor: 'white',
-                                color: '#000000',
-                            }}
-                        />
-    
-    
-    </>)
+    return (
+        <>
+            <ReactAudioPlayer
+                src={songSrc}
+                controls
+                ref={(element) => {
+                    setReactAudio(element)
+                }}
+                onCanPlayThrough={soundReady}
+                autoPlay
+                onEnded={onEnd}
+                style={{
+                    width: '100%',
+                    backgroundColor: 'white',
+                    color: '#000000',
+                }}
+            />
+        </>
+    )
 }
 
 export default SpotifyAudioPlayer

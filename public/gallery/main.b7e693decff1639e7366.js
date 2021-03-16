@@ -2260,7 +2260,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
   function traceForIE() {
     if (console.log) {
       if (console.log.apply) {
-        console.log.apply(console, arguments);
+        // console.log.apply(console, arguments);
       } else {
         // In old IE, native console methods themselves don't have apply().
         Function.prototype.apply.apply(console.log, [console, arguments]);
@@ -22092,11 +22092,11 @@ function logGroup(logFn) {
 module.exports = function (level, msg) {
   if (shouldLog(level)) {
     if (level === "info") {
-      console.log(msg);
+    //   console.log(msg);
     } else if (level === "warning") {
-      console.warn(msg);
+    //   console.warn(msg);
     } else if (level === "error") {
-      console.error(msg);
+    //   console.error(msg);
     }
   }
 };

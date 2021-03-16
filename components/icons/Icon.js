@@ -5,12 +5,9 @@ import { Power4 } from "gsap";
 const Icon = (props) => {
 
     const onMouseEnter = (e) => {
-        console.log('onMouseEnter')
-        console.log(e.target)
         gsap.to(e.target,{ duration: 0.3,  y: -20 ,ease: Power4.easeInOut})
     }
     const onMouseLeave = (e) => {
-        console.log('onMouseLeave')
         gsap.to(e.target,{ duration: 0.3,  y: 0 ,ease: Power4.easeInOut})
     }
 

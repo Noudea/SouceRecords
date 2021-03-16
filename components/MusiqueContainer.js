@@ -15,11 +15,9 @@ const MusiqueContainer = (props) => {
     })
 
     const onMouseEnter = () => {
-        console.log('mouseEnter')
     }
 
     const onClick = () => {
-        console.log('click')
         setIsOpen(true)
     }
     return (

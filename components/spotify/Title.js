@@ -17,7 +17,6 @@ const Title = (props) => {
     //         audioPlayer.play()
     //     }, 1000)
     // }
-    console.log(useContext(PlayerContext))
 
     useEffect(() => {
         setAudioPlayer(document.getElementById('audioPlayer'))

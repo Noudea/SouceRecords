@@ -59,21 +59,16 @@ const Spotify = () => {
         const progressBar = document.getElementById('progressBarContainer')
         if (progressBar) {
             setProgressBarWidth(progressBar.offsetWidth)
-            console.log(progressBarWidth)
         }
     })
 
     const soundReady = () => {
-        console.log(reactAudio.audioEl)
         if (reactAudio) {
             setMusicTotalDuration(reactAudio.audioEl.current.duration)
-            console.log(reactAudio.audioEl.current.duration)
-            console.log(reactAudio.audioEl.current.currentTime)
         }
     }
 
     const playEvent = () => {
-        console.log('playEvent')
         setCurrentTime(reactAudio.audioEl.current.currentTime)
         setPlaying(true)
     }
@@ -82,14 +77,12 @@ const Spotify = () => {
         setPlaying(false)
     }
     const listenEvent = () => {
-        console.log('listen evetn')
         setRangeBarWidth(
             (reactAudio.audioEl.current.currentTime /
                 reactAudio.audioEl.current.duration) *
                 100
         )
         setCursorPos(progressBarWidth * (rangeBarWidth / 100))
-        console.log(rangeBarWidth)
     }
     const onEnd = () => {
         next()
@@ -97,7 +90,6 @@ const Spotify = () => {
 
     const previous = () => {
         const currentPlaylist = playlist
-        console.log(songKey)
         if (songKey > 0) {
             setSongKey(songKey - 1)
             setSongSrc(myMusic[currentPlaylist][songKey - 1].src)
@@ -125,7 +117,6 @@ const Spotify = () => {
         const currentPlaylist = playlist
         if (!random && !repeat) {
             if (songKey == myMusic[currentPlaylist].length - 1) {
-                console.log('start to 0')
                 setSongKey(0)
                 setSongSrc(myMusic[currentPlaylist][0].src)
                 setSong(myMusic[currentPlaylist][0].title)
@@ -137,13 +128,11 @@ const Spotify = () => {
         }
         if (random) {
             const randomInt = getRandomInt(0, myMusic[currentPlaylist].length)
-            console.log('randomInt')
             setSongKey(randomInt)
             setSongSrc(myMusic[currentPlaylist][randomInt].src)
             setSong(myMusic[currentPlaylist][randomInt].title)
         }
         if (repeat) {
-            console.log('reapeat')
             reactAudio.audioEl.current.currentTime = 0
         }
     }
@@ -188,15 +177,10 @@ const Spotify = () => {
     }
 
     const progressBarClick = (e) => {
-        console.log('progressBar click')
         let bounds = e.target.getBoundingClientRect()
-        console.log(e.target.getBoundingClientRect())
         let x = e.clientX - bounds.left
         setCursorPos(x)
-        console.log(x)
-        console.log((x / bounds.width) * 100)
         let xcentage = (x / bounds.width) * 100
-        console.log(musicTotalDuration * (xcentage / 100))
         reactAudio.audioEl.current.currentTime =
             musicTotalDuration * (xcentage / 100)
         setRangeBarWidth(

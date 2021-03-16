@@ -9,12 +9,9 @@ const PageIcon = (props) => {
     
     
     const onMouseEnter = (e) => {
-        console.log('onMouseEnter')
-        console.log(e.target)
         gsap.to(e.target,{ duration: 0.3,  scale:1.03 ,ease: Power4.easeInOut})
     }
     const onMouseLeave = (e) => {
-        console.log('onMouseLeave')
         gsap.to(e.target,{ duration: 0.3,   scale:1 ,ease: Power4.easeInOut})
     }
 

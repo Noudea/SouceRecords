@@ -4,8 +4,6 @@ const Video = (props) => {
 
     useEffect(() => {
         const video = document.getElementById('video')
-        // video.muted=false;
-        console.log(video)
     })
     return(
         <>

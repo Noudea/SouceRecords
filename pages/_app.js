@@ -22,8 +22,6 @@ function MyApp({ Component, pageProps }) {
     const [screenWidth,setScreenWidth] = useState(false);
 
     useEffect(() => {
-        console.log(window.screen.width)
-        console.log(window.screen.height)
         if(window.screen.width < 400) {
             setWidth(window.screen.width+'px')
             setHeight('400px')

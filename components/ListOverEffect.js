@@ -45,7 +45,6 @@ const ListOverEffect = () => {
     }
 
     const onMouseLeave = () => {
-        console.log('onmouseleave')
         setPosition({x : 0, y: 0})
         setImgSrc('')
     }
