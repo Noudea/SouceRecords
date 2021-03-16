@@ -23,8 +23,11 @@ function MyApp({ Component, pageProps }) {
 
     useEffect(() => {
         if(window.screen.width < 400) {
+            // console.log(document.body.offsetHeight)
+            // console.log(window.innerHeight)
+            // console.log(window.screen.height)
             setWidth(window.screen.width+'px')
-            setHeight('400px')
+            setHeight(window.innerHeight-150+'px')
         } else {
             setWidth('375px')
             setHeight('812px')

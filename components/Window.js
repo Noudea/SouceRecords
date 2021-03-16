@@ -10,6 +10,7 @@ const Window = (props) => {
                 border-radius:10px;
                 overflow: scroll;
                 scrollbarWidth: none;
+                scrollbar-width: none;
             }
             `}</style>
             <div className="windowWrapper">
