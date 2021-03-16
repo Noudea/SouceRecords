@@ -76,7 +76,7 @@ const FadeInSection = () => {
 
                 @media screen and (min-width: 1024px) {
                     img {
-                        width: 40%;
+                        width: 400px;
                     }
                 }
 
