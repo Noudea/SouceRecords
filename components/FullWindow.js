@@ -33,7 +33,8 @@ const FullWindow = (props) => {
         setPosition('fixed')
         // setTop('500px')
         // setRight('500px')
-        setTop((window.innerHeight / 2)-330 + 'px')
+        // setTop((window.innerHeight / 2)-330 + 'px')
+        setTop(96+'px')
         setRight((window.innerWidth / 2)-187 +'px')
     })
     // const onResizeClick = () => {
