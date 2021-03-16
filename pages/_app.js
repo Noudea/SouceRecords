@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
                             <FullWindow
                                 width={width}
                                 height={height}
-                                pageName="Spotify"
+                                pageName="Soucesify"
                                 background="#010101"
                             >
 

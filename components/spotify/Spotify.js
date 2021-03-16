@@ -213,6 +213,9 @@ const Spotify = () => {
                     width: 90%;
                     background-color:black;
                 }
+                .pointer {
+                    cursor:pointer;
+                }
                 .progressBarContainer {
                     background-color: rgba(255, 255, 255, 0.2);
                     border-radius: 2px;
@@ -301,29 +304,31 @@ const Spotify = () => {
                         )}
                         <div className="spotifyAudioContainer">
                             <div
-                                className="progressBarContainer"
+                                className="progressBarContainer pointer"
                                 id="progressBarContainer"
                                 onClick={progressBarClick}
                             >
-                                <div className="rangeBar">
-                                    <div className="cursor"></div>
+                                <div className="rangeBar pointer">
+                                    <div className="cursor pointer"></div>
                                 </div>
                             </div>
                             <div className="controls">
                                 <img
-                                    className="rand"
+                                    className="rand pointer"
                                     onClick={toggleRandom}
                                     src="svg/random.svg"
                                 ></img>
                                 <img
                                     onClick={previous}
                                     src="svg/next-left.svg"
+                                    className='pointer'
                                 ></img>
                                 {playing ? (
                                     <>
                                         <img
                                             onClick={pauseMusic}
                                             src="svg/pause.svg"
+                                            className='pointer'
                                         ></img>
                                     </>
                                 ) : (
@@ -331,15 +336,17 @@ const Spotify = () => {
                                         <img
                                             onClick={playMusic}
                                             src="svg/play.svg"
+                                            className='pointer'
                                         ></img>
                                     </>
                                 )}
                                 <img
                                     onClick={next}
                                     src="svg/next-right.svg"
+                                    className='pointer'
                                 ></img>
                                 <img
-                                    className="rep"
+                                    className="rep pointer"
                                     onClick={toggleRepeat}
                                     src="svg/repeat.svg"
                                 ></img>

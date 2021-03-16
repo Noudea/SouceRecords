@@ -9,7 +9,7 @@ const FullWindow = (props) => {
     const [isVisible, setIsVisible] = useState(true)
     const [width, setWidth] = useState(props.width)
     const [height, setHeight] = useState(props.height)
-    const [position, setPosition] = useState('static')
+    const [position, setPosition] = useState('fixed')
     const [top, setTop] = useState('')
     const [right, setRight] = useState('')
     const [isMinimize,setIsMinimize] = useState(false)
@@ -32,7 +32,7 @@ const FullWindow = (props) => {
     }
 
     useEffect(() => {
-        setPosition('absolute')
+        setPosition('fixed')
         // setTop('500px')
         // setRight('500px')
         setTop((window.innerHeight / 2)-330 + 'px')
@@ -42,7 +42,7 @@ const FullWindow = (props) => {
     //     if (!isResized) {
     //         setWidth('100vw')
     //         setHeight('100vh')
-    //         setPosition('absolute')
+    //         setPosition('fixed')
     //         setRight('0px')
     //         setTop('0px')
     //         setImportant('!important')

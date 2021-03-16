@@ -71,7 +71,7 @@ const MusiqueContainer = (props) => {
                     <img src={props.imgSrc}></img>
                 </div>
                 {open ? <>
-                    <video id="video" autoPlay={true} className="video"  src={props.videoSrc}></video>
+                    <video id="video" controls autoPlay={true} className="video"  src={props.videoSrc}></video>
                 
                 </> : <>
                 <div className="contentContainer">
