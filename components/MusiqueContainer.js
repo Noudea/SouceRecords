@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import ButtonBorder from './ButtonBorder'
+import CoverVinyle from './CoverVinyle'
 
 const MusiqueContainer = (props) => {
     const [open, setIsOpen] = useState(false)
+    const [animate,setAnimate] = useState(false)
 
     useEffect(() => {
         const video = document.getElementById('video')
@@ -12,22 +14,33 @@ const MusiqueContainer = (props) => {
                 setIsOpen(false)
             })
         }
+    const vinyle = document.getElementsByClassName('vinyle')
+    console.log('vinyle',vinyle)
     })
 
     const onMouseEnter = () => {
     }
 
     const onClick = () => {
-        setIsOpen(true)
+
+        setAnimate(true)
+        // setIsOpen(true)
     }
     return (
         <>
             <style jsx>{`
+                .container {
+                    max-width:100%;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
                 .contentContainer {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    width:100%;
                 }
                 .contentWrapper {
                     width: 100%;
@@ -50,9 +63,10 @@ const MusiqueContainer = (props) => {
                     .container {
                         display: flex;
                         flex-direction: row;
+                        justify-content:space-between;
                     }
                     .contentContainer {
-                        width: 50%;
+                        width: 45%;
                         padding: var(--mainPadding);
                         justify-content: space-between;
                     }
@@ -66,7 +80,8 @@ const MusiqueContainer = (props) => {
             `}</style>
             <div className="container">
                 <div onMouseEnter={onMouseEnter} className="imgContainer">
-                    <img src={props.imgSrc}></img>
+                    {/* <img src={props.imgSrc}></img> */}
+                    <CoverVinyle animate={animate}></CoverVinyle>
                 </div>
                 {open ? <>
                     <video id="video" controls autoPlay={true} className="video"  src={props.videoSrc}></video>

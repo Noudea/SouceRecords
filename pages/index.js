@@ -7,6 +7,7 @@ import MusiqueContainer from '../components/MusiqueContainer'
 import ImgGallery from '../components/ImgGallery'
 import ListOverEffect from '../components/ListOverEffect'
 import Bullet from '../components/Bullet'
+import CoverVinyle from '../components/CoverVinyle'
 
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false)

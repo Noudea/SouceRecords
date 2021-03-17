@@ -67,6 +67,7 @@ body {
     /* color: #1d1d1f; */
     font-style: normal;
     font-size: 106.25%;
+    scrollbar-width: none;
 }
 
 main {
@@ -107,7 +108,7 @@ img {
 
 @media screen and (min-width: 768px) {
     :root {
-        --maxWidth : 92%;
+        --maxWidth : 70%;
     }
 }
 
@@ -125,7 +126,7 @@ img {
         --bigFontSize : 96px;
         --bigBigFontSize : 116px;
         --bigMargin : 100px;
-         --mainPadding : 0 32px;
+        --mainPadding : 0 32px;
     }
 }
 

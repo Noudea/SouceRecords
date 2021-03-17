@@ -79,7 +79,6 @@ function MyApp({ Component, pageProps }) {
                     )}
                     <Component {...pageProps} />
                 </main>
-                )
             </PageRenderContext.Provider>
         </>
     )
