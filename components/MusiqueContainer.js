@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import ButtonBorder from './ButtonBorder'
 import gsap from 'gsap'
 import { Expo, Linear } from 'gsap'
+import ButtonBackgroundColor from './ButtonBackgroundColor'
 
 const MusiqueContainer = (props) => {
     const [open, setIsOpen] = useState(false)
@@ -176,10 +177,11 @@ const MusiqueContainer = (props) => {
                             </div>
                             <div className="buttonContainer"></div>
                             <p className="textContent">{props.textContent}</p>
-                            <ButtonBorder
+                            <ButtonBackgroundColor
                                 onClick={onClick}
                                 textContent="Regarder le clip"
-                            ></ButtonBorder>
+                            >
+                            </ButtonBackgroundColor>
                         </div>
                     </>
                 )}
