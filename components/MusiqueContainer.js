@@ -1,71 +1,50 @@
 import { useState, useEffect } from 'react'
 import ButtonBorder from './ButtonBorder'
 import gsap from 'gsap'
-import { Power4, Expo, Power2, Elastic, Bounce , Linear } from 'gsap'
+import { Expo, Linear } from 'gsap'
 
 const MusiqueContainer = (props) => {
     const [open, setIsOpen] = useState(false)
-    const [animate, setAnimate] = useState(false)
-
+    const [animate,setAnimate] = useState(props.animate)
+    const [animateRotate,setAnimateRotate] = useState(props.animateRotate)
     useEffect(() => {
         const video = document.getElementById('video')
-        // video.muted=false;
         if (open) {
             video.addEventListener('ended', () => {
                 setIsOpen(false)
             })
         }
-        const vinyle = document.getElementsByClassName('vinyle')
-        console.log('vinyle', vinyle)
-
-        
         let rotateTl = gsap.timeline()
-        rotateTl.to('.animateRotate', {
+        rotateTl.set('.'+animateRotate, {
+            rotate: 0,
+            duration: 0,
+            ease: Linear.easeNone,
+        })
+        rotateTl.to('.'+animateRotate, {
             rotate: 360,
-            duration: 5,
+            duration: 10,
             ease: Linear.easeNone,
             repeat: -1,
         })
-
         rotateTl.play()
-
     })
 
     const onMouseEnter = () => {}
-
     const onClick = () => {
-        const animate = async () => {
+        const animatePlay = async () => {
             let tl = gsap.timeline()
-            tl.to('.animate', { x: 300, duration: 1, ease: Expo.easeInOut })
-            tl.set('.animate', { css: { zIndex: 2 } }) // set is basically a 0-second duration tween
-            tl.to('.animate', { scale: 20, opacity: 0, duration: 3.5 })
+            tl.to('.'+animate, { x: 300, duration: 1, ease: Expo.easeInOut })
+            tl.set('.'+animate, { css: { zIndex: 2 } }) // set is basically a 0-second duration tween
+            tl.to('.'+animate, { scale: 20, opacity: 0, duration: 3.5 })
             await tl.play()
             tl.seek(0)
             tl.pause(0)
-            // console.log(rotateTl)
-            // tl.set(".animateRotate", { clearProps: "all" });
         }
-        animate()
+        animatePlay()
         setTimeout(() => {
             setIsOpen(true)
-        }, 4000);
-        
-
-
-
-        // setAnimate(true)
-        // setTimeout(() => {
-        //     setAnimate(false)
-        //     setIsOpen(true)
-        //     gsap.set('.animateRotate', { clearProps: 'all' })
-        // }, 4500)
+        }, 4000)
     }
-
-
-
-
-
-
 
     return (
         <>
@@ -164,15 +143,15 @@ const MusiqueContainer = (props) => {
                         </div>
                         <div className="vinyle">
                             <img
-                                className="vinyleBase animate animateRotate"
+                                className={'vinyleBase '+animate+' '+animateRotate}
                                 src="/images/vinyl-img.png"
                             ></img>
                             <img
-                                className="vinyleReflection animate"
+                                className={'vinyleReflection '+animate}
                                 src="images/vinyl-reflection.png"
                             ></img>
                             <img
-                                className="vinyleScratch animate animateRotate"
+                                className={'vinyleScratch '+animate+' '+animateRotate}
                                 src="images/vinyl-scratches.png"
                             ></img>
                         </div>

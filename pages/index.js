@@ -72,6 +72,8 @@ export default function Home() {
                     <section>
                         <h2>En Vedette</h2>
                         <MusiqueContainer
+                            animateRotate='animateRotate'
+                            animate='animate'
                             imgSrc="/images/coverTrio.png"
                             videoSrc="/videos/yt1s.com -   KYLE FEAT SAM  TRIO CLIP OFFICIEL_v720P.mp4"
                             title="TRIO"
