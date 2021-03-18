@@ -116,7 +116,7 @@ export default function Home() {
                             colorTop="#fe728e"
                             colorMiddle="#000000"
                             colorBottom="#000000"
-                            header2="SHEDNA"
+                            header2="CHADNA"
                             h2="Lorem ipsum dolor sit"
                             textContent=" Integer sit amet
                     lobortis nisi. Proin molestie dictum leo, elementum posuere

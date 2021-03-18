@@ -134,7 +134,7 @@ const ListOverEffect = () => {
                 <div className="container2 wrapper">
                     <p data-imgsrc='/images/lindelof.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Leif Lindelof</p>
                     <p data-imgsrc='/images/santaCruz2.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Santacruz</p>
-                    <p data-imgsrc='/images/shadna3.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Shadna</p>
+                    <p data-imgsrc='/images/shadna3.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Chadna</p>
                     <p data-imgsrc='/images/#.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >King</p>
                     <p data-imgsrc='/images/#.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Guirmala</p>
                     <p data-imgsrc='/images/caitlyn.png' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >Caitlyn</p>
