@@ -6,37 +6,45 @@ import ButtonBackgroundColor from './ButtonBackgroundColor'
 
 const MusiqueContainer = (props) => {
     const [open, setIsOpen] = useState(false)
-    const [animate,setAnimate] = useState(props.animate)
-    const [animateRotate,setAnimateRotate] = useState(props.animateRotate)
+    const [animate, setAnimate] = useState(props.animate)
+    const [animateRotate, setAnimateRotate] = useState(props.animateRotate)
     useEffect(() => {
         const video = document.getElementById('video')
         if (open) {
             video.addEventListener('ended', () => {
                 setIsOpen(false)
             })
+            // video.addEventListener('ended',test())
         }
+        // function test () {
+        //     setIsOpen(false)
+        // }
         let rotateTl = gsap.timeline()
-        rotateTl.set('.'+animateRotate, {
+        rotateTl.set('.' + animateRotate, {
             rotate: 0,
             duration: 0,
             ease: Linear.easeNone,
         })
-        rotateTl.to('.'+animateRotate, {
+        rotateTl.to('.' + animateRotate, {
             rotate: 360,
             duration: 10,
             ease: Linear.easeNone,
             repeat: -1,
         })
         rotateTl.play()
+
+        return () => {
+            // cleanup
+        }
     })
 
     const onMouseEnter = () => {}
     const onClick = () => {
         const animatePlay = async () => {
             let tl = gsap.timeline()
-            tl.to('.'+animate, { x: 300, duration: 1, ease: Expo.easeInOut })
-            tl.set('.'+animate, { css: { zIndex: 2 } }) // set is basically a 0-second duration tween
-            tl.to('.'+animate, { scale: 20, opacity: 0, duration: 3.5 })
+            tl.to('.' + animate, { x: 300, duration: 1, ease: Expo.easeInOut })
+            tl.set('.' + animate, { css: { zIndex: 2 } }) // set is basically a 0-second duration tween
+            tl.to('.' + animate, { scale: 20, opacity: 0, duration: 3.5 })
             await tl.play()
             tl.seek(0)
             tl.pause(0)
@@ -144,15 +152,25 @@ const MusiqueContainer = (props) => {
                         </div>
                         <div className="vinyle">
                             <img
-                                className={'vinyleBase '+animate+' '+animateRotate}
+                                className={
+                                    'vinyleBase ' +
+                                    animate +
+                                    ' ' +
+                                    animateRotate
+                                }
                                 src="/images/vinyl-img.png"
                             ></img>
                             <img
-                                className={'vinyleReflection '+animate}
+                                className={'vinyleReflection ' + animate}
                                 src="images/vinyl-reflection.png"
                             ></img>
                             <img
-                                className={'vinyleScratch '+animate+' '+animateRotate}
+                                className={
+                                    'vinyleScratch ' +
+                                    animate +
+                                    ' ' +
+                                    animateRotate
+                                }
                                 src="images/vinyl-scratches.png"
                             ></img>
                         </div>
@@ -180,8 +198,7 @@ const MusiqueContainer = (props) => {
                             <ButtonBackgroundColor
                                 onClick={onClick}
                                 textContent="Regarder le clip"
-                            >
-                            </ButtonBackgroundColor>
+                            ></ButtonBackgroundColor>
                         </div>
                     </>
                 )}

@@ -95,6 +95,8 @@ img {
 :root {
     --tile-padding: 30px;
     --colorHawai : #005c56;
+    --colorSam : #fd151f;
+    --colorChadna : #fe728e;
     --mainPadding : 0 16px;
     --maxWidth : 92%;
     --smallSmallFontSize : 12px;
